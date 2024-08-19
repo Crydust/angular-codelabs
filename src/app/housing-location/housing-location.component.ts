@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { HousingLocation } from '../housing-location';
 
 @Component({
   selector: 'app-housing-location',
@@ -6,13 +7,14 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <section class="listing">
-      <img class="listing-photo">
-      <h2 class="listing-heading">heading</h2>
-      <p class="listing-location">location</p>
+      <img class="listing-photo" [src]="housingLocation.photo"
+        alt="Exterior photo of {{housingLocation.name}}">
+      <h2 class="listing-heading">{{housingLocation.name}}</h2>
+      <p class="listing-location">{{housingLocation.city}}, {{housingLocation.state}}</p>
     </section>
   `,
   styleUrl: './housing-location.component.css'
 })
 export class HousingLocationComponent {
-
+  @Input() housingLocation!: HousingLocation;
 }
