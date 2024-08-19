@@ -5,9 +5,11 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>
-      housing-location works!
-    </p>
+    <section class="listing">
+      <img class="listing-photo">
+      <h2 class="listing-heading">heading</h2>
+      <p class="listing-location">location</p>
+    </section>
   `,
   styleUrl: './housing-location.component.css'
 })
