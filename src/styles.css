@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background: #1f1f1f;
+        color: #d3d3d3;
+    }
+}
